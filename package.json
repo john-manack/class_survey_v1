@@ -1,0 +1,26 @@
+{
+  "name": "class_survey_v1",
+  "version": "1.0.0",
+  "description": "This project was created to rank the user's comfort level on certain technologies. It implements a model, view, and control structure.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-manack/class_survey_v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-manack/class_survey_v1/issues"
+  },
+  "homepage": "https://github.com/john-manack/class_survey_v1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3"
+  }
+}
