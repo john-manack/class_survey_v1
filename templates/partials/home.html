@@ -1,4 +1,4 @@
 <h1>${title}</h1>
 <ul>
-    ${data.map(topic => `<li>${topic.topic_name} - Ranking of ${topic.ranking_value} (${topic.ranking_title})</li>`).join('')}
+    ${data.map(topic => `<li><span class="language">${topic.topic_name}</span> - <span class="ranking_number">${topic.ranking_value}</span> <span class="ranking_description">(${topic.ranking_title})</span></li>`).join('')}
 </ul>
