@@ -1,15 +1,19 @@
 'use strict';
 
 const express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    surveyModel = require('../models/surveyModel');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    const surveyData = await surveyModel.getAll();
+    
     res.render('template', {
         locals: {
-            title: "Homepage",
+            title: "John's Language Rankings",
+            data: surveyData,
         },
         partials: {
-            body: "template"
+            body: "partials/home"
         }
     });
 });
