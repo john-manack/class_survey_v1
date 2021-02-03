@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "db:create": "createdb class_survey",
+    "db:destroy": "dropdb class_survey",
+    "db:init": "psql -f schema.sql class_survey",
+    "db:seed": "psql -f seed.sql class_survey"
   },
   "repository": {
     "type": "git",
