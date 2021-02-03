@@ -21,6 +21,7 @@
   "homepage": "https://github.com/john-manack/class_survey_v1#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-es6-template-engine": "^2.2.3"
+    "express-es6-template-engine": "^2.2.3",
+    "pg-promise": "^10.9.2"
   }
 }
