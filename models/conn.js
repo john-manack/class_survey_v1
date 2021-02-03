@@ -1,6 +1,6 @@
 'use strict';
 const host = 'localhost',
-    database = 'apple_ceos';
+    database = 'class_survey';
 
 const pgp = require('pg-promise')({
     query: function (event) {
