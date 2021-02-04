@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     
     res.render('template', {
         locals: {
-            title: "John's Language Rankings",
+            title: "Language Rankings",
             data: surveyData,
         },
         partials: {
