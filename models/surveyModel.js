@@ -20,9 +20,15 @@ class SurveyModel {
     };
 
     static async getRankings() {
+        try {
         const response = await db.any(`
             SELECT * FROM ranking_scale;
         `)
+        return response;
+        } catch (error) {
+            console.error("ERROR: ", error);
+            return  error;
+        }
     }
 
     static async updateEntry(new_score){

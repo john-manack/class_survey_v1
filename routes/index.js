@@ -5,14 +5,17 @@ const express = require('express'),
     surveyModel = require('../models/surveyModel');
 
 router.get('/', async (req, res) => {
-    const surveyData = await surveyModel.getAll(),
-        rankingData = await surveyModel.getRankings();
+    const surveyData = await surveyModel.getAll();
+    const rankingData = await surveyModel.getRankings();
+    console.log("survey data: ", surveyData);
+    console.log("ranking data: ", rankingData);
 
     
     res.render('template', {
         locals: {
             title: "Language Rankings",
-            data: surveyData,
+            surveyData,
+            rankingData
         },
         partials: {
             body: "partials/home"
