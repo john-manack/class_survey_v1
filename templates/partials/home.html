@@ -2,3 +2,16 @@
 <ul>
     ${data.map(topic => `<li><span class="language">${topic.topic_name}</span> - <span class="ranking_number">${topic.ranking_value}</span> <span class="ranking_description">(${topic.ranking_title})</span></li>`).join('')}
 </ul>
+
+<p>Use the dropdown to update the data base for your comfort level with <strong>HTML</strong></p>
+<form action="/" method="POST">
+    <select name="new_ranking">
+        <option value="1">Awesome</option>
+        <option value="2">Great</option>
+        <option value="3">Good</option>
+        <option value="4">Okay</option>
+        <option value="5">Poor</option>
+        <option value="6">Unranked</option>
+    </select>
+    <button type="submit">Update HTML Score</button>
+</form>
