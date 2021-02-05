@@ -31,12 +31,12 @@ class SurveyModel {
         }
     }
 
-    static async updateEntry(new_score){
+    static async updateEntry(topic, new_score){
         const response = await db.result(`
         UPDATE topics
         SET topic_score = $1
-        WHERE id = 1;
-        `, [new_score]);
+        WHERE topic_name = $2;
+        `, [new_score, topic]);
         return response;
     }
 }

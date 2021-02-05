@@ -24,16 +24,10 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { new_ranking } = req.body;
-    console.log('Req body is: ', req.body);
-    console.log('New Ranking is: ', new_ranking);
-    const response = await surveyModel.updateEntry(new_ranking)
-    console.log('Update response is: ', response);
-    if (response.rowCount >= 1) {
-        res.redirect('/')
-    } else {
-        res.sendStatus(500);
+    for (let key in req.body) {
+        await surveyModel.updateEntry(key, req.body[key]);
     }
+    res.redirect('/');
 })
 
 module.exports = router;
