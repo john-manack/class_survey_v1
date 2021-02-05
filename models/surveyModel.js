@@ -10,7 +10,7 @@ class SurveyModel {
 
     static async getAll() {
         const response = await db.any(`
-            SELECT topic_name, ranking_value, ranking_title
+            SELECT *
             FROM topics
             INNER JOIN ranking_scale
                 ON topics.topic_score = ranking_scale.id

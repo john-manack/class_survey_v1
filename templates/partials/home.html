@@ -7,7 +7,7 @@
         <p>Use the dropdown to update the data base for your comfort level with <strong>${topic.topic_name}</strong></p>
         <select name="${topic.topic_name}">
             ${rankingData.map(status => { return `
-                <option value=${status.id}>${status.ranking_title}</option>
+                <option value=${status.id} ${topic.id === status.id ? 'selected' : ''}>${status.ranking_title}</option>
             `})}
         </select>
         <hr>
